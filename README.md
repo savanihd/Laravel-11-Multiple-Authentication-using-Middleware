@@ -1,66 +1,95 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel 11 Multiple Authentication using Middleware Example
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+  Build an Laravel 11 Multiple Authentication using Middleware Step by Step example. you have to simply follow the below steps:
+  - Step 1: Install Laravel 11
+  - Step 2: Create Migration and Update Model
+  - Step 3: Create Auth using Scaffold
+  - Step 4: Create UserAccess Middleware
+  - Step 5: Create Routes
+  - Step 6: Update Controller
+  - Step 7: Create Blade Files
+  - Step 8: Update LoginController File
+  - Step 9: Create User Seeder
+  - Run Laravel 11 App
 
-## About Laravel
+![laravel-11-multi-auth-example](https://www.itsolutionstuff.com/upload/laravel-11-multi-auth-user.png)
+![laravel-11-multi-auth-example](https://www.itsolutionstuff.com/upload/laravel-11-multi-auth-admin.png)
+![laravel-11-multi-auth-example](https://www.itsolutionstuff.com/upload/laravel-11-multi-auth-manager.png)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+ Run `php artisan serve` for a dev server. Navigate to `http://localhost:8000/`. The application will automatically reload if you change any of the source files.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## ⭐️ List of Laravel 11 Tutorial Examples Step by Step: 
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<table>
+<tr>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/laravel-11-crud-application-example-tutorialexample.html">Laravel 11 CRUD Application Tutorial</a></td>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/laravel-11-import-export-excel-and-csv-file-tutorialexample.html">Laravel 11 Import Export Excel and CSV File</a></td>
+</tr>
+<tr>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/laravel-11-user-roles-and-permissions-tutorialexample.html">Laravel 11 User Roles and Permissions</a></td>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/laravel-11-json-web-tokenjwt-api-authentication-tutorialexample.html">Laravel 11 JWT API Authentication</a></td>
+</tr>
+<tr>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/laravel-11-rest-api-authentication-using-sanctum-tutorialexample.html">Laravel 11 Sanctum REST API Authentication</a></td>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/laravel-11-rest-api-with-passport-authentication-tutorialexample.html">Laravel 11 Passport REST API Authentication</a></td>
+</tr>
+<tr>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/laravel-11-generate-pdf-file-using-dompdf-exampleexample.html">Laravel 11 Generate PDF File using DomPDF</a></td>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/laravel-11-yajra-datatables-example-tutorialexample.html">Laravel 11 Yajra Datatables Example Tutorial</a></td>
+</tr>
+<tr>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/how-to-create-and-use-trait-in-laravel-11example.html">How to Create and User Trait in Laravel 11?</a></td>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/how-to-create-custom-middleware-in-laravel-11example.html">Laravel 11 Create Custom Middleware</a></td>
+</tr>
+<tr>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/how-to-publish-api-route-file-in-laravel-11example.html">How to Publish API Routes in Laravel 11?</a></td>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/how-to-create-interface-in-laravel-11example.html">How to Create Interface in Laravel 11?</a></td>
+</tr>
+<tr>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/how-to-create-custom-class-in-laravel-11example.html">How to Create Custom Class in Laravel 11?</a></td>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/how-to-create-custom-class-in-laravel-11example.html">How to Create Custom Class in Laravel 11?</a></td>
+</tr>
+<tr>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/laravel-11-pagination-with-relationship-exampleexample.html">Laravel 11 Pagination with Relationship Example</a></td>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/how-to-upload-files-to-amazon-s3-in-laravel-11example.html">How to Upload Files to Amazon S3 in Laravel 11?</a></td>
+</tr>
+<tr>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/laravel-11-scout-full-text-search-tutorialexample.html">Laravel 11 Scout Full Text Search</a></td>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/laravel-11-resize-image-before-upload-exampleexample.html">Laravel 11 Resize Image Before Upload Example</a></td>
+</tr>
+<tr>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/how-to-generate-qr-code-in-laravel-11example.html">How to Generate QR Code in Laravel 11?</a></td>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/laravel-11-resize-image-before-upload-exampleexample.html">Laravel 11 One to Many Eloquent Relationship</a></td>
+</tr>
+<tr>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/laravel-11-chart-using-highcharts-js-exampleexample.html">Laravel 11 Chart using Highcharts JS</a></td>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/laravel-11-socialite-login-with-google-account-exampleexample.html">Laravel 11 Socialite Login with Google</a></td>
+</tr>
+<tr>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/laravel-11-drag-and-drop-file-upload-with-dropzone-jsexample.html">Laravel 11 Dropzone Drag and Drop File Upload</a></td>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/laravel-11-stripe-payment-gateway-integration-exampleexample.html">Laravel 11 Stripe Payment Gateway Integration</a></td>
+</tr>
+<tr>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/how-to-create-event-calendar-in-laravel-11example.html">Laravel 11 Create Event Calendar</a></td>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/laravel-11-crud-with-image-upload-tutorialexample.html">Laravel 11 CRUD with Image Upload</a></td>
+</tr>
+<tr>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/setup-automatic-daily-database-backup-with-laravel-11example.html">Laravel 11 Automatic Daily Database Backup</a></td>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/how-to-save-json-data-in-database-in-laravel-11example.html">Laravel 11 Save JSON Data in Database</a></td>
+</tr>
+<tr>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/laravel-11-livewire-crud-using-jetstream-tailwind-cssexample.html">Laravel 11 Livewire CRUD using Jetstream</a></td>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/how-to-create-zip-archive-file-in-laravel-11example.html">How to Create ZIP Archive File in Laravel 11?</a></td>
+</tr>
+<tr>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/laravel-11-livewire-wizard-multi-step-form-tutorialexample.html">Laravel 11 Livewire Wizard Multi Step Form</a></td>
+    <td>🔗 <a href="https://www.itsolutionstuff.com/post/laravel-11-ckeditor-image-upload-exampleexample.html">Laravel 11 CKeditor Image Upload Example</a></td>
+</tr>
+</table>
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🚀 Published By
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Publish one article daily about Laravel on the [ItSolutionStuff.com](https://www.itsolutionstuff.com).
